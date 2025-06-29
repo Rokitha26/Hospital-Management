@@ -1,0 +1,121 @@
+/*reviews.css*/
+
+/* Review Section - Enhanced with Gradient and Animations */
+.review {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #f1f1f1, #e0e0e0);
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review .boxContainer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.review .box {
+    background: linear-gradient(145deg, #fff, #f2f2f2); /* Light gradient for review box */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 350px;
+    flex: 1 1 30%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    opacity: 0;
+    animation: boxFadeIn 1s ease-out forwards;
+}
+
+/* Adding a unique animation for each box */
+@keyframes boxFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review .box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(145deg, #f2f2f2, #fff); /* Reverse the gradient on hover */
+}
+
+.review .box img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.review .box img:hover {
+    transform: scale(1.1);
+}
+
+.review .box h3 {
+    font-size: 22px;
+    color: #e74c3c; /* Red color for names */
+    margin-bottom: 10px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.review .star i {
+    color: #f39c12; /* Yellow for stars */
+}
+
+.review .box p {
+    font-size: 16px;
+    color: #444; /* Dark gray color for text */
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif; /* Unique, stylish font */
+    margin-top: 10px;
+    transition: color 0.3s ease;
+    opacity: 0;
+    animation: textFadeIn 1.2s ease-in-out forwards;
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.review .box p:hover {
+    color: #e74c3c; /* Red color on hover */
+}
+
+/* Animation for the whole review container */
+.review .boxContainer > .box:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.review .boxContainer > .box:nth-child(2) {
+    animation-delay: 0.6s;
+}
+
+.review .boxContainer > .box:nth-child(3) {
+    animation-delay: 0.9s;
+}

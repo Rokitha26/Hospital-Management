@@ -1,0 +1,149 @@
+/*aboutstyle.css*/
+:root {
+  --main: #ff1a1a; /* red tone */
+}
+
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
+  border: none;
+  transition: 0.2s all linear;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+
+*::selection {
+  background: var(--main);
+  color: #000;
+}
+
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+
+body {
+  background:black;
+  color: #fff;
+  line-height: 1.6;
+}
+
+
+section {
+  padding: 2rem 9%;
+}
+
+
+/* Scrollbar styling */
+html::-webkit-scrollbar {
+  width: 10px;
+}
+html::-webkit-scrollbar-thumb {
+  background: var(--main);
+}
+html::-webkit-scrollbar-track {
+  background: #000;
+}
+
+
+/* Heading */
+.heading {
+  text-align: center;
+  padding-bottom: 2rem;
+  font-size: 4.5rem;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+.heading span {
+  color: var(--main);
+  text-transform: uppercase;
+}
+
+
+/* Rows */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 0;
+  border-bottom: 1px solid #800000;
+  background: linear-gradient(135deg, #0f2027, #2c5364);
+
+
+}
+
+
+/* Content */
+.content {
+  flex: 1 1 55%;
+  padding: 2rem;
+  color: #f2f2f2;
+  font-size: 1.9rem;
+}
+
+
+/* Image box */
+.img {
+  flex: 1 1 35%;
+  text-align: right;
+  padding: 2rem;
+}
+.img img {
+  max-width: 100%;
+  height: auto;
+  width: 200px;
+  border-radius: 10px;
+  border: 3px solid var(--main);
+  box-shadow: 0 0.5rem 1rem rgba(255, 26, 26, 0.3);
+}
+
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #260000;
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+
+/* Optional Button if used */
+.btn {
+  display: inline-block;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.7);
+  margin-top: 1rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  font-size: 1.7rem;
+  color: var(--main);
+  border-radius: 0.5rem;
+}
+.btn span {
+  background: var(--main);
+  color: #fff;
+  margin-left: 0.5rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+}
+.btn:hover {
+  background: var(--main);
+  color: #fff;
+}
+.btn:hover span {
+  color: var(--main);
+  background: #fff;
+  margin-left: 1.2rem;
+}

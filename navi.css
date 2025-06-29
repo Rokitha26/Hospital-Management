@@ -1,0 +1,92 @@
+/*navi.css*/
+
+/* General navbar styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+	background: linear-gradient(135deg, #a6c1ee, #fbc2eb);
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Logo styles */
+.header .logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+.header .logo i {
+    margin-right: 10px;
+}
+
+/* Navbar link styles */
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    margin: 0 15px;
+    text-transform: uppercase;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Hover effect on links */
+.navbar a:hover {
+    color: #ffcc00; /* Hover color */
+    transform: translateY(-5px);
+}
+
+/* Hamburger menu styles */
+#MenuBtn {
+    display: none; /* Hidden by default for larger screens */
+    font-size: 3rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Mobile menu styling */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #ff5733;
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .navbar a {
+        margin: 10px 0;
+    }
+
+    #MenuBtn {
+        display: block; /* Show hamburger menu */
+    }
+
+    /* Show navbar links when the menu is clicked */
+    #MenuBtn.active + .navbar {
+        display: flex;
+    }
+}
+
+/* Active state for the hamburger button */
+#MenuBtn.active {
+    color: #ffcc00; /* Active state color */
+}
+
+/* Add some margin to the content below the navbar to prevent it from being hidden */
+body {
+    margin-top: 80px; /* Add a top margin to prevent content from being hidden behind the navbar */
+}
